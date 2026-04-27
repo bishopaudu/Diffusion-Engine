@@ -1,0 +1,30 @@
+[package]
+name = "diffusion-engine"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "diffusion"
+path = "src/main.rs"
+
+[dependencies]
+# Image loading and saving
+image = "0.25"
+
+# Gaussian random number generation (Box-Muller needs uniform RNG)
+rand = "0.8"
+rand_distr = "0.4"
+
+# Terminal UI
+ratatui = "0.26"
+crossterm = "0.27"
+
+# CLI argument parsing
+clap = { version = "4", features = ["derive"] }
+
+# Progress display
+indicatif = "0.17"
+
+# Floating point convenience
+num-traits = "0.2"
+anyhow = "1.0.102"
